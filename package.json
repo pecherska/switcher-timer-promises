@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pecherska/switcher-timer-promises"
+    "url": "git+https://github.com/pecherska/switcher-timer-promises.git"
   },
   "keywords": [],
   "author": "Nina Pecherska <npecherska@gmail.com>",
