@@ -16,9 +16,10 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     choosenDate = selectedDates[0];
-    if (choosenDate < options.defaultDate) {
+    startBtn.disabled = false;
+    if (choosenDate < new Date()) {
       startBtn.disabled = true;
-      return alert("Дата в майбутньому");
+      return alert("Дата в минулому");
 
     }
     
@@ -35,7 +36,7 @@ startBtn.addEventListener('click', startTimer);
 function startTimer() {
   console.log(choosenDate);
   setInterval(() => {
-    const deltaTime = choosenDate - options.defaultDate;
+    const deltaTime = choosenDate - new Date();
     console.log(convertMs(deltaTime));
     const { days, hours, minutes, seconds } = convertMs(deltaTime);
     date.textContent = addLeadingZero(days);
