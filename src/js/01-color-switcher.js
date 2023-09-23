@@ -6,6 +6,7 @@ console.dir(stopBtn);
 console.dir(body);
 let switcher = null;
 
+stopBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
     switcher = setInterval(() => {
